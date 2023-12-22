@@ -1,5 +1,5 @@
 {
     "require": {
-        "microsoft/microsoft-graph": "^2.2.0"
+        "microsoft/microsoft-graph": "^2.1.0"
     }
 }
