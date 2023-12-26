@@ -1,5 +1,10 @@
 {
     "require": {
         "microsoft/microsoft-graph": "^2.1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }
