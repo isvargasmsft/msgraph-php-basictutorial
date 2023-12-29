@@ -15,8 +15,9 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext);
 
 try {
     $user = $graphServiceClient->users()->byUserId("AlexW@M365x86781558.OnMicrosoft.com")->get()->wait();
-    echo "Hello, I am {$user->getGivenName()}";
-
+    if ($user != null) {
+        echo "Hello, I am {$user->getGivenName()}";
+    }
 } catch (ApiException $ex) {
     echo $ex->getError()->getMessage();
 }
