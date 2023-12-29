@@ -17,6 +17,8 @@ try {
     $user = $graphServiceClient->users()->byUserId("AlexW@M365x86781558.OnMicrosoft.com")->get()->wait();
     if ($user != null) {
         echo "Hello, I am {$user->getGivenName()}";
+    } else {
+        echo "There is no such user";
     }
 } catch (ApiException $ex) {
     echo $ex->getError()->getMessage();
